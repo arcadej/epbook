@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Mgcode:</b>
+  <%= @magagine.mgcode %>
+</p>
+
+<p>
+  <b>Mgname:</b>
+  <%= @magagine.mgname %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%= @magagine.publisher %>
+</p>
+
+<p>
+  <b>Publisheddate:</b>
+  <%= @magagine.publisheddate %>
+</p>
+
+<p>
+  <b>Volume:</b>
+  <%= @magagine.volume %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @magagine.number %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @magagine.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_magagine_path(@magagine) %> |
+<%= link_to 'Back', magagines_path %>

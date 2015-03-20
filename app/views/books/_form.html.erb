@@ -1,0 +1,58 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "") %> 個のエラーが発生しました:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :'ISBN コード' %><br />
+    <%= f.text_field :ISBN %><br />
+  </div>
+  <div class="field">
+    <%= f.label :書名 %><br />
+    <%= f.text_field :bookname%>
+  </div>  
+  <div class="field">
+    <%= f.label :著者 %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :出版社 %><br />
+    <%= f.text_field :publisher %>
+  </div>
+  <div class="field">
+    <%= f.label :刊行日 %><br />
+    <%= f.date_select :publisheddate, :use_month_numbers =>true, :start_year => 1900, :discard_day => true %>
+  </div>
+  <div class="field">
+    <%= f.label :価格 %><br />
+    <%= f.number_field :price %><br />
+    ※円のみ
+  </div>
+  <div class="field">
+    <%= f.label :場所 %><br />
+    <%= f.select(:place, ['A-1','A-2','A-3','A-4', 'A-5', 'A-6',
+	'B-1','B-2','B-3','B-4', 'B-5', 'B-6',
+	'C-1','C-2','C-3','C-4', 'C-5', 'C-6',
+	'D-1','D-2','D-3','D-4', 'D-5', 'D-6',
+	'E-1','E-2','E-3','E-4', 'E-5', 'E-6'],
+	{ :include_blank => '選択してください'}, { :class => 'plc'})%>
+    <br />
+  </div>
+    <%= fields_for @status do |af| %>
+      <div class="field">
+        <%= af.label :existance %><br />
+	<%= af.check_box :existance, {}, true, false %>納品済み
+      </div>
+    <% end %>
+  <div class="actions">
+    <%= f.submit '登録' %>
+  </div>
+<% end %>

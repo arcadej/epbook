@@ -1,0 +1,37 @@
+<p>ようこそ<%= @user.name %>さん</p>
+<!% @menu = "menu"%>
+<ul>
+<li><a href = "/books">書籍一覧</a></li>
+<li><a href = "/books/new">新規書籍登録</a></li>
+<li><%= link_to 'アカウント更新', chpass_path(@user) %></li>
+<!--<%#= p @rent %>-->
+<li><%= link_to 'ログアウト', logout_path %></li>
+<li><%= link_to 'Top', mypage_path %></li>
+<li><a href = "/users/new">ユーザー登録<a></li>
+</ul>
+
+<!--
+if (<=%# @myrent.length == 0 %>)
+   p '現在貸出中の本はありません.'
+else
+<table>
+  <tr>
+    <th>Isbn</th>
+    <th>bookname</th>
+    <th>Author</th>
+    <th>Publisher</th>
+    <th>Publisheddate</th>
+    <th>Price</th>
+  </tr>
+<%# @myrent.each do |book| %>
+  <tr>
+    <td><%#= book.ISBN %></td>
+    <td><%#= book.bookname %></td>
+    <td><%#= book.author %></td>
+    <td><%#= book.publisher %></td>
+    <td><%#= book.publisheddate %></td>
+    <td><%#= book.price %></td>
+  </tr>
+<%# end %>
+</table>
+-->

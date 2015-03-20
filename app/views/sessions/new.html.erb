@@ -1,0 +1,18 @@
+<h1>EPnetFaN書籍管理システム</h1>
+<%= form_tag sessions_path do %>
+<div class="field">
+<%= label_tag :アカウント名 %>
+<%= text_field_tag :name, params[:name] %>
+</div>
+<div class="field">
+<%= label_tag :パスワード %>
+<%= password_field_tag :password %>
+</div>
+<div class="actions"><%= submit_tag "ログイン" %>
+</div>
+
+      <p align="center">
+	<font size="1" color="#ffffff" style ="background-color:#dcdcdc;"><%= link_to '新規ユーザ登録申請', userapplicate_path  %></font>
+      </p>
+
+<% end %>

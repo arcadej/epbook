@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<h1>詳細画面</h1>
+<p>
+  <b>IBSN コード:</b>
+  <%= @book.ISBN %>
+</p>
+<p>
+  <b>書名:</b>
+  <%= @book.bookname %>
+</p>
+<p>
+  <b>著者:</b>
+  <%= @book.author %>
+</p>
+
+<p>
+  <b>出版社:</b>
+  <%= @book.publisher %>
+</p>
+
+<p>
+  <b>刊行日:</b>
+  <%= @book.publisheddate %>
+</p>
+
+<p>
+  <b>価格:</b>
+<!--  <%#= @book.price %> -->
+  <%= number_to_currency(@book.price, :unit => '円', :precision => 0, :format => '%n%u') %>
+</p>
+
+<p>
+  <b>状態:</b>
+  <%#= @status.existance ? '納品済み':'未納品' %>
+  <%= p @status.existance.class  %>
+</p>
+
+<%= link_to '編集', edit_book_path(@book) %> |
+<%= link_to '戻る', books_path %> | 
+<%= link_to '新規書籍登録', new_book_path %>

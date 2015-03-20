@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mgcode: MyString
+  mgname: MyString
+  publisher: MyString
+  publisheddate: 2013-06-11
+  volume: 1
+  number: 1
+  price: 
+
+two:
+  mgcode: MyString
+  mgname: MyString
+  publisher: MyString
+  publisheddate: 2013-06-11
+  volume: 1
+  number: 1
+  price: 

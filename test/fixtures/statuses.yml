@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  existance: false
+  rental: MyString
+
+two:
+  existance: false
+  rental: MyString

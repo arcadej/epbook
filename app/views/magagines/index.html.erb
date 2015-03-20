@@ -1,0 +1,35 @@
+<h1>Listing magagines</h1>
+
+<table>
+  <tr>
+    <th>Mgcode</th>
+    <th>Mgname</th>
+    <th>Publisher</th>
+    <th>Publisheddate</th>
+    <th>Volume</th>
+    <th>Number</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @magagines.each do |magagine| %>
+  <tr>
+    <td><%= magagine.mgcode %></td>
+    <td><%= magagine.mgname %></td>
+    <td><%= magagine.publisher %></td>
+    <td><%= magagine.publisheddate %></td>
+    <td><%= magagine.volume %></td>
+    <td><%= magagine.number %></td>
+    <td><%= magagine.price %></td>
+    <td><%= link_to 'Show', magagine %></td>
+    <td><%= link_to 'Edit', edit_magagine_path(magagine) %></td>
+    <td><%= link_to 'Destroy', magagine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Magagine', new_magagine_path %>
